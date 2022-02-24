@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习ID和标题属性</title>
+    <link rel="stylesheet" href="style/minimal-table.css">
+  </head>
+  <body>
+    <table>
+      <caption>
+        How I chose to spend my money
+      </caption>
+      <thead>
+        <tr>
+          <th id="purchase" scope="col">Purchase</th>
+          <th id="location" scope="col">Location</th>
+          <th id="date" scope="col">Date</th>
+          <th id="evaluation" scope="col">Evaluation</th>
+          <th id="cost" scope="col">Cost (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="haircut" scope="row">Haircut</th>
+          <td headers="location haircut">Hairdresser</td>
+          <td headers="date haircut">12/09</td>
+          <td headers="evaluation haircut">Great idea</td>
+          <td headers="haircut cost">30</td>
+        </tr>
+        <tr>
+          <th id="lasagna" scope="row">Lasagna</th>
+          <td headers="lasagna location">Restaurant</td>
+          <td headers="lasagna date">12/09</td>
+          <td headers="evaluation lasagna">Regrets</td>
+          <td headers="lasagna cost">18</td>
+        </tr>
+        <tr>
+          <th id="shoes" scope="row">Shoes</td>
+          <td headers="shoes location">Shoeshop</td>
+          <td headers="shoes date">13/09</td>
+          <td headers="shoes evaluation">Big regrets</td>
+          <td headers="shoes cost">65</td>
+        </tr>
+        <tr>
+          <th id="toothpaste" scope="row">Toothpaste</th>
+          <td headers="toothpaste location">Supermarket</td>
+          <td headers="toothpaste date">13/09</td>
+          <td headers="toothpaste evaluation">Good</td>
+          <td headers="toothpaste cost">5</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4" id="sum" scope="rowgroup">SUM</th>
+          <th headers="sum cost">118</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

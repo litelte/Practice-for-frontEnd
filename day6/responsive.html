@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式图片练习</title>
+  </head>
+  <body>
+    <!-- 标准的使用img标签 -->
+    <img src="src/elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
+    <!-- 使用srcset和size标签来实现响应式显示 -->
+    <div>下面是响应式布局</div>
+    <img
+      srcset="
+        src/elva-fairy-320w.jpg 320w,
+        src/elva-fairy-480w.jpg 480w,
+        src/elva-fairy-800w.jpg 800w
+      "
+      sizes="(max-width: 320px) 280px,
+    (max-width: 480px) 440px, 800px"
+      src="src/elva-fairy-800w.jpg"
+      alt="Elva dressed as a fairy"
+    />
+  </body>
+</html>

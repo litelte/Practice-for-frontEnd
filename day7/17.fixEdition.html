@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用id和scope对items-sold进行改造(修改版)</title>
+    <link rel="stylesheet" href="style/minimal-table.css" />
+  </head>
+  <body>
+    <table>
+      <caption>
+        <strong>Items Sold August 2016</strong>
+      </caption>
+      <thead>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <th colspan="3" id="clothes" scope="colgroup">Clothes</th>
+          <th colspan="2" id="accessories" scope="colgroup">Accessories</th>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <th id="trousers" scope="col">Trousers</th>
+          <th id="skirts" scope="col">Skirts</th>
+          <th id="dresses" scope="col">Dresses</th>
+          <th id="bracelets" scope="col">Bracelets</th>
+          <th id="rings" scope="col">Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3" id="belgium" scope="rowgroup">Belgium</th>
+          <th id="antwerp" scope="row">Antwerp</th>
+          <td headers="trousers antwerp belgium clothes">56</td>
+          <td headers="skirts antwerp belgium clothes">22</td>
+          <td headers="antwerp dresses belgium clothes">43</td>
+          <td headers="antwerp bracelets accessories belgium">72</td>
+          <td headers="antwerp rings accessories belgium">23</td>
+        </tr>
+        <tr>
+          <th id="gent" scope="row">Gent</th>
+          <td headers="gent trousers clothes belgium">46</td>
+          <td headers="gent skirts clothes belgium">18</td>
+          <td headers="gent dresses clothes belgium">50</td>
+          <td headers="gent bracelets accessories belgium">61</td>
+          <td headers="gent rings accessories belgium">15</td>
+        </tr>
+        <tr>
+          <th id="brussels" scope="row">Brussels</th>
+          <td headers="brussels trousers clothes belgium">51</td>
+          <td headers="brussels skirts clothes belgium">27</td>
+          <td headers="brussels dresses clothes belgium">38</td>
+          <td headers="brussels bracelets accessories belgium">69</td>
+          <td headers="brussels rings accessories belgium">28</td>
+        </tr>
+        <tr>
+          <th rowspan="2" id="theNetherlands" scope="rowgroup">
+            The Netherlands
+          </th>
+          <th id="amsterdam" scope="row">Amsterdam</th>
+          <td headers="amsterdam trousers clothes theNetherlands">89</td>
+          <td headers="amsterdam skirts clothes theNetherlands">34</td>
+          <td headers="amsterdam dresses clothes theNetherlands">69</td>
+          <td headers="amsterdam bracelets accessories theNetherlands">85</td>
+          <td headers="amsterdam rings accessories theNetherlands">38</td>
+        </tr>
+        <tr>
+          <th id="utrecht" scope="row">Utrecht</th>
+          <td headers="utrecht trousers clothes theNetherlands">80</td>
+          <td headers="utrecht skirts clothes theNetherlands">12</td>
+          <td headers="utrecht dresses clothes theNetherlands">43</td>
+          <td headers="utrecht bracelets accessories theNetherlands">36</td>
+          <td headers="utrecht rings accessories theNetherlands">19</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习嵌入</title>
+  </head>
+  <body>
+    <!-- 学习使用iframe -->
+    <!-- Youtube中的 -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/S0KZ5iXTkzg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- Google地图中的 -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2003.9776843315974!2d109.0209519065175!3d34.24709836072715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-CN!2s!4v1639032866183!5m2!1szh-CN!2s"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+    <!-- 下面自己实际操作一下 -->
+    <iframe
+      src="https://www.bilibili.com/video/BV1bW411n7fY?from=search&seid=5603686902135744195&spm_id_from=333.337.0.0"
+      frameborder="0"
+      width="560"
+      height="315"
+      title="Bilibili Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      ><p>改革春风吹满地</p></iframe
+    >
+    <!-- 下面是B站官方嵌入的代码 -->
+    <!-- 可以看出官方推荐的是没有登录信息提示的 -->
+    <iframe
+      src="//player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+      width="560"
+      height="315"
+      allow="autoplay"
+    >
+    </iframe>
+    <!-- 在页面上添加MDN词汇表 -->
+    <!-- Mozilla官方的例子 -->
+    <iframe
+      src="https://developer.mozilla.org/en-US/docs/Glossary"
+      width="500"
+      height="500"
+      frameborder="1"
+      allowfullscreen
+      sandbox
+    >
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+          Fallback link for browsers that don't support iframes
+        </a>
+      </p>
+    </iframe>
+    <iframe
+      src="//player.bilibili.com/player.html?aid=466379538&bvid=BV1o5411d7ze&cid=506167130&page=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+    >
+    </iframe>
+  </body>
+</html>

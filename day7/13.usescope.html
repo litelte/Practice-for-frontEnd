@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习使用scope</title>
+    <link rel="stylesheet" href="style/minimal-table.css" />
+  </head>
+  <body>
+    <!--
+      用来帮助屏幕阅读设备更好地理解那些标题单元格，
+      个标题单元格到底是列标题呢，还是行标题。
+     -->
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Purchase</th>
+          <th scope="col">Location</th>
+          <th scope="col">Date</th>
+          <th scope="col">Evaluation</th>
+          <th scope="col">Cost (€)</th>
+        </tr>
+      </thead>
+    </table>
+    <!--
+      以及每一行都可以这样定义一个行标题 (如果我们已经使用了 th 和 td 元素):
+     -->
+    <div>另外一个</div>
+    <table>
+      <tr>
+        <th scope="row">Haircut</th>
+        <td>Hairdresser</td>
+        <td>12/09</td>
+        <td>Great idea</td>
+        <td>30</td>
+      </tr>
+    </table>
+  </body>
+</html>
+<!--
+  总结：加不加这个scope对于正常人来说，意义不是很大，但是对于视障人群帮助会很大，
+  这可以让他们像正常人一样理解这个表格
+ -->

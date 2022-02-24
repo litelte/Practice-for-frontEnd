@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用id和scope对items-sold进行改造</title>
+    <link rel="stylesheet" href="style/minimal-table.css" />
+  </head>
+  <body>
+    <table>
+      <caption>
+        <strong>Items Sold August 2016</strong>
+      </caption>
+      <thead>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <th colspan="3" id="clothes" scope="colgroup">Clothes</th>
+          <th colspan="2" id="accessories" scope="colgroup">Accessories</th>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <th id="trousers" headers="clothes" scope="col">Trousers</th>
+          <th id="skirts" headers="clothes" scope="col">Skirts</th>
+          <th id="dresses" headers="clothes" scope="col">Dresses</th>
+          <th id="bracelets" headers="accessories" scope="col">Bracelets</th>
+          <th id="rings" headers="accessories" scope="col">Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3" id="belgium" scope="rowgroup">Belgium</th>
+          <th id="antwerp" headers="belgium" scope="row">Antwerp</th>
+          <td headers="trousers antwerp">56</td>
+          <td headers="skirts antwerp">22</td>
+          <td headers="antwerp dresses">43</td>
+          <td headers="antwerp bracelets">72</td>
+          <td headers="antwerp rings">23</td>
+        </tr>
+        <tr>
+          <th id="gent" headers="belgium" scope="row">Gent</th>
+          <td headers="gent trousers">46</td>
+          <td headers="gent skirts">18</td>
+          <td headers="gent dresses">50</td>
+          <td headers="gent bracelets">61</td>
+          <td headers="gent rings">15</td>
+        </tr>
+        <tr>
+          <th id="brussels" headers="belgium" scope="row">Brussels</th>
+          <td headers="brussels trousers">51</td>
+          <td headers="brussels skirts">27</td>
+          <td headers="brussels dresses">38</td>
+          <td headers="brussels bracelets">69</td>
+          <td headers="brussels rings">28</td>
+        </tr>
+        <tr>
+          <th rowspan="2" id="theNetherlands" scope="rowgroup">
+            The Netherlands
+          </th>
+          <th id="amsterdam" headers="theNetherlands" scope="row">Amsterdam</th>
+          <td headers="amsterdam trousers">89</td>
+          <td headers="amsterdam skirts">34</td>
+          <td headers="amsterdam dresses">69</td>
+          <td headers="amsterdam bracelets">85</td>
+          <td headers="amsterdam rings">38</td>
+        </tr>
+        <tr>
+          <th id="utrecht" headers="theNetherlands" scope="row">Utrecht</th>
+          <td headers="utrecht trousers">80</td>
+          <td headers="utrecht skirts">12</td>
+          <td headers="utrecht dresses">43</td>
+          <td headers="utrecht bracelets">36</td>
+          <td headers="utrecht rings">19</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!--
+  FIXME:对id和header的理解不清除，标题只有id，不能有header
+  TODO:修改这个文件，重新命名为修改版，修改为正确的格式
+ -->

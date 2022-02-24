@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习音视频</title>
+    <style>
+      video {
+        /* 控制视频的背景为黑色 */
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- control -->
+    <video
+      controls
+      width="400"
+      height="400"
+      loop
+      muted
+      preload="auto"
+      poster="assert/hello.png"
+    >
+      <source src="./assert/sarlong.mp4" type="video/mp4" />
+      <source src="./assert/sarlong.webm" type="video/webm" />
+      <p>
+        Your browser doesn't support HTML5 video. Here is a
+        <a href="./assert/sarlong.mp4">link to the video</a> instead.
+      </p>
+    </video>
+    <div>
+      <video controls width="400" loop muted preload="auto" poster="assert/hello.png">
+        <source src="./assert/sarlong.mp4" type="video/mp4" />
+        <source src="./assert/sarlong.webm" type="video/webm" />
+      </video>
+    </div>
+  </body>
+</html>

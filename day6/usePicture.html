@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用picture标签进行美术设计</title>
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(max-width: 799px)"
+        srcset="src/elva-480w-close-portrait.jpg"
+      />
+      <source media="(min-width: 800px)" srcset="src/elva-800w.jpg" />
+      <img
+        src="src/elva-800w.jpg"
+        alt="Chris standing up holding his daughter Elva"
+      />
+    </picture>
+  </body>
+</html>

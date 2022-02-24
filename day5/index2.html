@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习audio标签的用法</title>
+  </head>
+  <body>
+    <!-- audio标签和video标签有很多类似的地方 -->
+    <audio controls>
+      <source src="assert/somethingjustlikethis.mp3" type="audio/mp3" />
+      <source src="assert/somethingjustlikethis.ogg" type="audio/ogg" />
+      <p>
+        你的浏览器不支持HTML5音频，可点击<a
+          href="assert/somethingjustlikethis.mp3"
+          >此链接</a
+        >收听。
+      </p>
+    </audio>
+    <!-- audio标签不支持width和height，没有视觉部件，所以poster属性也无法使用
+    但好消息是，audio支持video的其他属性，下面我们对它进行修改 -->
+    <div>
+      <audio controls preload="auto" autoplay loop>
+          <source src="assert/somethingjustlikethis.mp3" type="audio/mp3">
+          <source src="assert/somethingjustlikethis.ogg" type="audio/ogg">
+      </audio>
+    </div>
+    <!-- 重新播放媒体 -->
+  </body>
+</html>
