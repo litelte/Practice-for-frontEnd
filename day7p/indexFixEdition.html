@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构建一个行星数据表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 使用Caption作为标题 -->
+    <table>
+        <h1>太阳行星数据</h1>
+        <caption>太阳系中行星的一些数据（资料取自<a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA 行星数据 - 公制</a>，图片取自<a
+                href="https://www.nasa.gov/multimedia/imagegallery/">NASA 照片库</a>。）
+        </caption>
+        <colgroup>
+            <col span="2">
+            <col style="border: 3px solid black;">
+        </colgroup>
+        <!-- 总共是10行12列 -->
+        <thead>
+            <tr>
+                <th colspan="2">&nbsp;</th>
+                <th id="名字" scope="col">名字</th>
+                <th id="图片" scope="col">图片</th>
+                <th id="质量" scope="col">质量(10<sup>24</sup>kg)</th>
+                <th id="直径" scope="col">直径(km)</th>
+                <th id="密度" scope="col">密度(kg/m<sup>3</sup>)</th>
+                <th id="重力" scope="col">重力(m/s<sup>2</sup>)</th>
+                <th id="天长" scope="col">天长(hours)</th>
+                <th id="与太阳距离" scope="col">与太阳距离(10<sup>6</sup>km)</th>
+                <th id="平均温度" scope="col">平均温度(°C)</th>
+                <th id="卫星数量" scope="col">卫星数量</th>
+                <th id="备注" scope="col">备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" colspan="2" id="类地行星" scope="rowgroup">类地行星</th>
+                <th id="水星" headers="名字 类地行星" scope="row">水星</th>
+                <td id="水星照片" headers="类地行星 水星 图片"><img src="img/水星.jpg" alt="水星照片" width="80"></td>
+                <td id="水星质量" headers="水星 质量 类地行星">0.330</td>
+                <td id="水星直径" headers="水星 类地行星 直径">4,879</td>
+                <td id="水星密度" headers="水星 类地行星 密度">5427</td>
+                <td id="水星重力" headers="水星 类地行星 重力">3.7</td>
+                <td id="水星天长" headers="水星 类地行星 天长">4222.6</td>
+                <td id="水星与太阳距离" headers="水星 类地行星 与太阳距离">57.9</td>
+                <td id="水星平均温度" headers="水星 类地行星 平均温度">167</td>
+                <td id="水星卫星数量" headers="水星 类地行星 卫星数量">0</td>
+                <td id="水星备注" headers="水星 类地行星 备注">与太阳最近</td>
+            </tr>
+            <tr>
+                <th id="金星" headers="名字 类地行星" scope="row">金星</th>
+                <td id="金星照片" headers="类地行星 图片 金星"><img src="img/金星.jpg" alt="金星照片" width="80"></td>
+                <td id="金星质量" headers="金星 质量 类地行星">4.87</td>
+                <td id="金星直径" headers="金星 类地行星 直径">12,104</td>
+                <td id="金星密度" headers="金星 类地行星 密度">5243</td>
+                <td id="金星重力" headers="金星 类地行星 重力">8.9</td>
+                <td id="金星天长" headers="金星 类地行星 天长">2802.0</td>
+                <td id="金星与太阳距离" headers="金星 类地行星 与太阳距离">108.2</td>
+                <td id="金星平均温度" headers="金星 类地行星 平均温度">464</td>
+                <td id="金星卫星数量" headers="金星 类地行星 卫星数量">0</td>
+                <td id="金星备注" headers="金星 类地行星 备注">&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="地球" headers="名字 类地行星" scope="row">地球</th>
+                <td id="地球照片" headers="类地行星 图片 地球"><img src="img/地球.jpg" alt="地球照片" width="80"></td>
+                <td id="地球质量" headers="地球 质量 类地行星">5.97</td>
+                <td id="地球直径" headers="地球 类地行星 直径">12,756</td>
+                <td id="地球密度" headers="地球 类地行星 密度">5514</td>
+                <td id="地球重力" headers="地球 类地行星 重力">9.8</td>
+                <td id="地球天长" headers="地球 类地行星 天长">24.0</td>
+                <td id="地球与太阳距离" headers="地球 类地行星 与太阳距离">149.6</td>
+                <td id="地球平均温度" headers="地球 类地行星 平均温度">15</td>
+                <td id="地球卫星数量" headers="地球 类地行星 卫星数量">1</td>
+                <td id="地球备注" headers="地球 类地行星 备注">我们的世界</td>
+            </tr>
+            <tr>
+                <th id="火星" headers="名字 类地行星" scope="row">火星</th>
+                <td id="火星照片" headers="类地行星 图片 火星"><img src="img/火星.jpg" alt="火星照片" width="80"></td>
+                <td id="火星质量" headers="火星 质量 类地行星">0.642</td>
+                <td id="火星直径" headers="火星 类地行星 直径">6,792</td>
+                <td id="火星密度" headers="火星 类地行星 密度">3933</td>
+                <td id="火星重力" headers="火星 类地行星 重力">3.7</td>
+                <td id="火星天长" headers="火星 类地行星 天长">24.7</td>
+                <td id="火星与太阳距离" headers="火星 类地行星 与太阳距离">227.9</td>
+                <td id="火星平均温度" headers="火星 类地行星 平均温度">-65</td>
+                <td id="火星卫星数量" headers="火星 类地行星 卫星数量">2</td>
+                <td id="火星备注" headers="火星 类地行星 备注">红色星球</td>
+            </tr>
+            <tr>
+                <th rowspan="4" id="类木行星" scope="rowgroup">类木行星</th>
+                <th rowspan="2" id="气巨星" headers="类木行星" scope="rowgroup">气巨星</th>
+                <th id="木星" headers="类木行星 气巨星 名字" scope="row">木星</th>
+                <td id="木星照片" headers="类木行星 气巨星 木星 图片"><img src="img/木星.jpg" alt="木星照片" width="80"></td>
+                <td id="木星质量" headers="类木行星 气巨星 木星 质量">1898</td>
+                <td id="木星直径" headers="类木行星 气巨星 木星 直径">142,984</td>
+                <td id="木星密度" headers="类木行星 气巨星 木星 密度">1326</td>
+                <td id="木星重力" headers="类木行星 气巨星 木星 重力">23.1</td>
+                <td id="木星天长" headers="类木行星 气巨星 木星 天长">9.9</td>
+                <td id="木星与太阳距离" headers="类木行星 气巨星 木星 与太阳距离">778.6</td>
+                <td id="木星平均温度" headers="类木行星 气巨星 木星 平均温度">-110</td>
+                <td id="木星卫星数量" headers="类木行星 气巨星 木星 卫星数量">67</td>
+                <td id="木星备注" headers="类木行星 气巨星 木星 备注">太阳系最大</td>
+            </tr>
+            <tr>
+                <th id="土星" headers="类木行星 气巨星 名字" scope="row">土星</th>
+                <td id="土星照片" headers="类木行星 气巨星 土星 图片"><img src="img/土星.jpg" alt="土星照片" width="80"></td>
+                <td id="土星质量" headers="类木行星 气巨星 土星 质量">568</td>
+                <td id="土星直径" headers="类木行星 气巨星 土星 直径">120,536</td>
+                <td id="土星密度" headers="类木行星 气巨星 土星 密度">687</td>
+                <td id="土星重力" headers="类木行星 气巨星 土星 重力">9.0</td>
+                <td id="土星天长" headers="类木行星 气巨星 土星 天长">10.7</td>
+                <td id="土星与太阳距离" headers="类木行星 气巨星 土星 与太阳距离">1433.5</td>
+                <td id="土星平均温度" headers="类木行星 气巨星 土星 平均温度">-140</td>
+                <td id="土星卫星数量" headers="类木行星 气巨星 土星 卫星数量">62</td>
+                <td id="土星备注" headers="类木行星 气巨星 土星 备注"></td>
+            </tr>
+            <tr>
+                <th rowspan="2" id="冰巨星" headers="类木行星" scope="rowgroup">冰巨星</th>
+                <th id="天王星" headers="类木行星 冰巨星 名字" scope="row">天王星</th>
+                <td id="天王星照片" headers="类木行星 冰巨星 天王星 图片"><img src="img/天王星.jpg" alt="天王星照片" width="80"></td>
+                <td id="天王星质量" headers="类木行星 冰巨星 天王星 质量">86.8</td>
+                <td id="天王星直径" headers="类木行星 冰巨星 天王星 直径">51,118</td>
+                <td id="天王星密度" headers="类木行星 冰巨星 天王星 密度">1271</td>
+                <td id="天王星重力" headers="类木行星 冰巨星 天王星 重力">8.7</td>
+                <td id="天王星天长" headers="类木行星 冰巨星 天王星 天长">17.2</td>
+                <td id="天王星与太阳距离" headers="类木行星 冰巨星 天王星 与太阳距离">2872.5</td>
+                <td id="天王星平均温度" headers="类木行星 冰巨星 天王星 平均温度">-195</td>
+                <td id="天王星卫星数量" headers="类木行星 冰巨星 天王星 卫星数量">27</td>
+                <td id="天王星备注" headers="类木行星 冰巨星 天王星 备注">&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="海王星" headers="类木行星 冰巨星 名字" scope="row">海王星</th>
+                <td id="海王星照片" headers="类木行星 冰巨星 海王星 图片"><img src="img/海王星.jpg" alt="海王星照片" width="80"></td>
+                <td id="海王星质量" headers="类木行星 冰巨星 海王星 质量">102</td>
+                <td id="海王星直径" headers="类木行星 冰巨星 海王星 直径">49,528</td>
+                <td id="海王星密度" headers="类木行星 冰巨星 海王星 密度">1638</td>
+                <td id="海王星重力" headers="类木行星 冰巨星 海王星 重力">11.0</td>
+                <td id="海王星天长" headers="类木行星 冰巨星 海王星 天长">16.1</td>
+                <td id="海王星与太阳距离" headers="类木行星 冰巨星 海王星 与太阳距离">4495.1</td>
+                <td id="海王星平均温度" headers="类木行星 冰巨星 海王星 平均温度">-200</td>
+                <td id="海王星卫星数量" headers="类木行星 冰巨星 海王星 卫星数量">14</td>
+                <td id="海王星备注" headers="类木行星 冰巨星 海王星 备注">&nbsp;</td>
+            </tr>
+            <tr>
+                <th colspan="2" id="矮行星" scope="rowgroup">矮行星*</th>
+                <th id="冥王星" headers="矮行星 名字" scope="row">冥王星</th>
+                <td id="冥王星照片" headers="矮行星 冥王星 图片"><img src="img/冥王星.jpg" alt="冥王星照片" width="80"></td>
+                <td id="冥王星质量" headers="矮行星 冥王星 质量">0.0146</td>
+                <td id="冥王星直径" headers="矮行星 冥王星 直径">2,370</td>
+                <td id="冥王星密度" headers="矮行星 冥王星 密度">2095</td>
+                <td id="冥王星重力" headers="矮行星 冥王星 重力">0.7</td>
+                <td id="冥王星天长" headers="矮行星 冥王星 天长">153.3</td>
+                <td id="冥王星与太阳距离" headers="矮行星 冥王星 与太阳距离">5906.4</td>
+                <td id="冥王星平均温度" headers="矮行星 冥王星 平均温度">-225</td>
+                <td id="冥王星卫星数量" headers="矮行星 冥王星 卫星数量">5</td>
+                <td id="冥王星备注" headers="矮行星 冥王星 备注">2006年降格，但 <a
+                        href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">尚存争议</a>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
