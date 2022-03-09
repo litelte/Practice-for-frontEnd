@@ -1,0 +1,21 @@
+h1{
+    /* 给标题更改颜色 */
+    color: red;
+}
+p{
+    /* 给段落更改颜色 */
+    color: green;
+}
+/* 将段落和列表都变为绿色 */
+p,li{
+    color: green;
+}
+/* 改变元素的默认行为 */
+li{
+    /* 取消默认样式 */
+    list-style-type: none;
+    /* 设置Nasa样式 */
+    /* list-style-type: space-counter; */
+    list-style-type: circle;
+    list-style-type: "\1F44D";
+}

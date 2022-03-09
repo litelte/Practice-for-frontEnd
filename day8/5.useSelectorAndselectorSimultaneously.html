@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可以同时使用选择器和选择符</title>
+    <style>
+        /* 第一个例子 */
+        article p span {
+            color: aquamarine;
+        }
+
+        /* 第二个例子 */
+        h2+p {
+            font-weight: 200%;
+            color: red;
+        }
+
+        /* 第三个例子，可以将多个类型组合在一起 */
+        body h2 + p .special{
+            color: yellow;
+            background-color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>可以同时使用选择器和选择符</h1>
+    <p>具体的例子看上面的style标签中的内容</p>
+    <!-- 第一个例子，在<article>标签中的段落标签中<p>的span标签 -->
+    <h2>第一个例子</h2>
+    <article>
+        <p>这是文章的第一段，就是<span>第一个重要的内容</span></p>
+    </article>
+    <h2>第二个例子</h2>
+    <!-- 第二个例子中，选择标题后面，并且与标题具有相同层级的段落样式
+         注意，一定是段落样式。标题样式无论是一级标题还是二级标题都无所谓，但是一定得是
+         段落样式 -->
+    <p>下面就是这个例子</p>
+    <ul>
+        <li>项目1</li>
+        <li>项目2</li>
+        <li>项目3</li>
+    </ul>
+    <h2>第三个例子</h2>
+    <!-- 这里要使用的样式的意思是：
+         在<body>之内，紧接在<h2>后面的<p>元素的内部，类名为 special。 -->
+    <p>这里就是要使用的<span class="special">例子啊</span></p>
+</body>
+
+</html>

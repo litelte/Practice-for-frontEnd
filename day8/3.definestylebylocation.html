@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据元素在文档中的位置确定样式</title>
+    <style>
+        li em{
+            color: greenyellow;
+        }
+        /* 而对于相同层级，在HTML文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，
+        为此需在两个选择器之间添加一个 + 号 (成为 相邻选择符)  */
+        h1 + p{
+            font-size: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>根据元素在文档中的位置确定样式</h1>
+    <!-- 现在有两个<em>标签，一个在段落内，一个在列表项内，如果仅修改列表项内的<em>标签样式，
+        则可以用下面的方法 -->
+    <p>这是一个段落文本，只是<em>示例用</em></p>
+    <p>下面是一个表格</p>
+    <ul>
+        <li>子项1</li>
+        <li>子项2</li>
+        <li><em>子项</em>3</li>
+    </ul>
+</body>
+
+</html>
