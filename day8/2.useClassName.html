@@ -12,7 +12,7 @@
             color: orange;
             font-weight: bold;
         }
-
+        /* 使用类来重复调用 */
         li.special,
         span.special {
             color: orange;
@@ -24,8 +24,10 @@
 <body>
     <h1>练习使用类名</h1>
     <ul>
-        <li>项目一</li>
-        <li class="special">项目二</li>
+        <!-- 需要注意的是，就算前面加了，标签中还是得要加class
+        -->
+        <li  class="special">项目一</li>
+        <li>项目二</li>
         <li>项目 <em>三</em></li>
         <p>这是一段话，这段话包含了很多的东西，其中有<span class="special">一个含有span标签的句子</span>还有一个<a href="https://toget.top">链接</a></p>
     </ul>

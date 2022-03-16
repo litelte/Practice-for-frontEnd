@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>可以同时使用选择器和选择符</title>
+    <!-- 这个点是将前面学到的东西进行组合复用
+         一个是所属关系
+         另一个是相同层级 -->
     <style>
         /* 第一个例子 */
         article p span {
@@ -19,7 +22,7 @@
         }
 
         /* 第三个例子，可以将多个类型组合在一起 */
-        body h2 + p .special{
+        body h2+p .special {
             color: yellow;
             background-color: black;
             padding: 5px;
@@ -31,15 +34,20 @@
     <h1>可以同时使用选择器和选择符</h1>
     <p>具体的例子看上面的style标签中的内容</p>
     <!-- 第一个例子，在<article>标签中的段落标签中<p>的span标签 -->
+    <!-- 第一个就是所属层级的例子 -->
     <h2>第一个例子</h2>
     <article>
         <p>这是文章的第一段，就是<span>第一个重要的内容</span></p>
+        <p>测试2，<span>hello这个就是有效果</span></p>
+        <span>测试3，这个就没有上色效果</span>
+        <span>必须得是在p标签中的span标签，否则没有效果</span>
     </article>
     <h2>第二个例子</h2>
     <!-- 第二个例子中，选择标题后面，并且与标题具有相同层级的段落样式
          注意，一定是段落样式。标题样式无论是一级标题还是二级标题都无所谓，但是一定得是
          段落样式 -->
     <p>下面就是这个例子</p>
+    <p>只要不相邻，就没法用</p>
     <ul>
         <li>项目1</li>
         <li>项目2</li>
@@ -49,6 +57,15 @@
     <!-- 这里要使用的样式的意思是：
          在<body>之内，紧接在<h2>后面的<p>元素的内部，类名为 special。 -->
     <p>这里就是要使用的<span class="special">例子啊</span></p>
+    <p>标签中不设置类名，也是没法用的</p>
+    <h2>
+        第四个例子
+    </h2>
+    <p>这是测试例子2：<span>测试例子2呀，没加.special类名的</span></p>
+    <!-- 下面是加上.special后的效果 -->
+    <!-- <p>这是测试例子2：<span class="special">测试例子2呀，没加.special类名的</span></p> -->
+    <p>前面再隔一个标签，都没法安排上样式，不信看这个</p>
+    <p>这是测试例子3：<span class="special">再测试一次呀，前面都隔了一个p标签了，我还是要加special类名</span></p>
 </body>
 
 </html>
