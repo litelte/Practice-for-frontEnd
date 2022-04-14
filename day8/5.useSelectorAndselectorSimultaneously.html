@@ -11,17 +11,20 @@
          另一个是相同层级 -->
     <style>
         /* 第一个例子 */
+        /* 所有article标签下的段落p下的span标签中的内容都有这样的属性 */
         article p span {
             color: aquamarine;
         }
 
         /* 第二个例子 */
+        /* h2二级标题下的p段落都有这样的属性 */
         h2+p {
             font-weight: 200%;
             color: red;
         }
 
         /* 第三个例子，可以将多个类型组合在一起 */
+        /* 网页内容body下h2标题下面的段落p都有.special类中的属性，前提是需要引用才能有这个效果 */
         body h2+p .special {
             color: yellow;
             background-color: black;
