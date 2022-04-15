@@ -578,3 +578,107 @@ a:link
 h1, h2, .intro
 ```
 
+**选择器的专一性**
+
+通常情况下，两个选择器可以选择相同的HTML元素。考虑下面的样式表，其中我有一个规则，其中有一个将段落设置为蓝色的p选择器，还有一个将选定元素设置为红色的类。
+
+```css
+.special {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+```
+
+比方说，在我们的HTML文档中，我们有一个带有特殊类的段落。这两条规则都适用，那么谁赢了？你认为我们的段落会变成什么颜色？
+
+```html
+<p class="special">What color am I?</p>
+```
+
+> what color am I?句子的颜色为红色，而不是蓝色，我猜测是属性先后生效
+
+CSS语言有规则来控制在发生碰撞时哪条规则将获胜--这些规则称为级联规则和专用规则。在下面的代码块中，我们为p选择器定义了两个规则，但是段落最后是蓝色的。这是因为将其设置为蓝色的声明将出现在样式表的后面，而稍后的样式将覆盖以前的样式。这就是起作用的级联。
+
+```css
+p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+```
+
+但是，在我们同时使用了类选择器和元素选择器的前一个例子中，类将获胜，使得段落变红--即使它出现在样式表的前面。一个类被描述为比元素选择器更具体，或者具有更多的特异性，所以它获胜了。
+
+> 最后的运行结果是蓝色，如果再加上一个.special，同时元素中再引用这个，最后应该是.special的类属性
+
+==提前说一句，因为具体性和层叠的规则，所以才这样显示==
+
+### 15.3[属性和值](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E5%B1%9E%E6%80%A7%E5%92%8C%E5%80%BC)
+
+在最基本的层面上，CSS由两个组成部分组成：
+
+- **属性：**人类可读的标识符，指示您想要更改的样式特征(例如`font-size`, `width`, `background-color`) 你想改变。
+- **值：**每个指定的属性都有一个值，该值指示您希望如何更改这些样式特性(例如，要将字体、宽度或背景色更改为。)
+
+![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+
+在这个图片中，有色块的部分为CSS声明。CSS声明就是与值配对的属性。
+
+CSS声明放在CSS声明块中。如图，标紫色的区域含有多个属性和值
+
+CSS声明外的那个h1是选择器，CSS声明块与选择器配对，以生成CSS规则集(或CSS规则)。
+
+![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+
+将CSS属性设置为特定值是CSS语言的核心功能。CSS引擎计算哪些声明应用于页面的每个元素，以便适当地布局和样式它。重要的是要记住，在css中，==属性和值都是区分大小写的。==每对中的属性和值由冒号(：)分隔。
+
+> 需要注意的是：如果属性未知或某个值对给定属性无效，则声明被视为无效，并被浏览器的CSS引擎完全忽略。
+
+**函数**
+
+虽然大多数值是相对简单的关键字或数值，但也有一些可能的值以函数的形式出现。一个例子是calc()函数。这个函数允许您在CSS中进行简单的计算，例如：
+
+```html
+<div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+```
+
+```css
+.outer {
+  border: 5px solid black;
+}
+
+.box {
+  padding: 10px;
+  width: calc(90% - 30px);
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+![image-20220415192203626](F:/MarkdownResSource/README.assets/image-20220415192203626.png)
+
+一个函数由函数名和一些括号组成，其中放置了该函数的允许值。在上面的calc()示例中，我要求此框的宽度为包含块宽度的90%，减去30像素。这不是我可以提前计算的东西，只是在CSS中输入值，因为我不知道90%会是什么。与所有值一样，MDN上的相关页面将有使用示例，这样您就可以看到函数是如何工作的。
+
+**另外的一个例子**
+
+```html
+<div class="box"></div>
+```
+
+```css
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  transform: rotate(0.8turn)
+}
+```
+
+![image-20220415192342777](F:/MarkdownResSource/README.assets/image-20220415192342777.png)
+

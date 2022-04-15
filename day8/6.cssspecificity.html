@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证CSS类的专一性</title>
+    <!-- style默认优先在head里，而不是body里面 -->
+    <style>
+        .special {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        }
+        p{
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 验证同时使用上面的两个属性，最后哪个会生效 -->
+    <p class="special">what color am I?</p>
+    <!-- 最后红色的会生效 -->
+    <!-- 而如果再加一个p的CSS类，会有咋样的变化 -->
+    <p>A New what color am I?</p>
+    <!-- 这个时候结果已经显示为P最新设置的那个颜色 -->
+    <p class="special">Reuse .special this class!</p>
+
+</body>
+
+</html>
