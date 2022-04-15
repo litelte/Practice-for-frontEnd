@@ -682,3 +682,76 @@ CSS声明外的那个h1是选择器，CSS声明块与选择器配对，以生成
 
 ![image-20220415192342777](F:/MarkdownResSource/README.assets/image-20220415192342777.png)
 
+### 15.4@规则
+
+到目前为止，我们还没有遇到 `@rules` (pronounced "at-rules"). 这是一些特殊的规则，为 CSS提供了一些关于如何表现的指导。 有些`@rules` 规则很简单，有规则名和值。例如，要将额外的样式表导入主CSS样式表，可以使用`@import`:
+
+```
+@import 'styles2.css';
+```
+
+您将遇到的最常见的 `@rules` 之一是@media，它允许您使用 [媒体查询 ](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)来应用CSS，仅当某些条件成立(例如，当屏幕分辨率高于某一数量，或屏幕宽度大于某一宽度时)。
+
+在下面的 CSS中，我们将给 `<body>` 元素一个粉红色的背景色。但是，我们随后使用@media创建样式表的一个部分，该部分仅适用于视口大于30em的浏览器。如果浏览器的宽度大于30em，则背景色将为蓝色。
+
+```css
+body {
+  background-color: pink;
+}
+
+@media (min-width: 30em) {
+  body {
+    background-color: blue;
+  }
+}
+```
+
+上面的示例运行结果：
+
+页面高度小于30em时：
+
+![image-20220415202852435](F:/MarkdownResSource/README.assets/image-20220415202852435.png)
+
+页面高度大于30em时：
+
+![image-20220415202842922](F:/MarkdownResSource/README.assets/image-20220415202842922.png)
+
+### 15.5速记属性
+
+一些属性，如 [`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font), [`background`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background), [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding), [`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border), and [`margin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin) 等属性称为速记属性--这是因为它们允许您在一行中设置多个属性值，从而节省时间并使代码更整洁。
+
+例如，这一行代码：
+
+```css
+/* In 4-value shorthands like padding and margin, the values are applied
+   in the order top, right, bottom, left (clockwise from the top). There are also other
+   shorthand types, for example 2-value shorthands, which set padding/margin
+   for top/bottom, then left/right */
+padding: 10px 15px 15px 5px;
+```
+
+与这四行代码是等价的：
+
+```css
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+```
+
+这一行：
+
+```css
+background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+```
+
+与这五行代码是等价的：
+
+```css
+background-color: red;
+background-image: url(bg-graphic.png);
+background-position: 10px 10px;
+background-repeat: repeat-x;
+background-attachment: fixed;
+```
+
