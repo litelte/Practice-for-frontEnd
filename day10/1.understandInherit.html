@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理解CSS中布局的继承</title>
+    <style>
+        .main{
+            color: rebeccapurple;
+            border: 2px solid #ccc;
+            padding: 1em;
+        }
+        .special{
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 制作一个列表，列表的第二项和第一项的外观不同-->
+    <ul class="main">
+        <li>Item One</li>
+        <li>Item Two~
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+            </ul>
+        </li>
+        <li>Item Three
+            <ul class="special">
+                <li>3.1
+                    <ul>
+                        <li>3.1.1</li>
+                        <li>3.1.2</li>
+                    </ul>
+                </li>
+                <li>3.2</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- 通过这个例子：
+    color可以从外到内地继承，无论是紫色还是黑色，而width,margins,padding,borders都不会被继承 -->
+</body>
+</html>
