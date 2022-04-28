@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更深一层地理解继承</title>
+    <style>
+        /* 开始的样式 */
+        body {
+            color: greenyellow;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        /* 继承样式 */
+        .my-class-1 a {
+            color: inherit;
+        }
+
+        /* 初始化样式 */
+        .my-class-2 a {
+            color: initial;
+        }
+
+        /* 不设置样式，也不继承 */
+        .my-class-3 a {
+            color: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 控制继承的方式，着实有点迷，感觉看不太懂 -->
+    <ul>
+        <!-- 默认样式 -->
+        <li>Default <a href="#">link</a> color</li>
+        <!-- 继承样式 -->
+        <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+        <!-- 设置属性和浏览器默认样式相同 -->
+        <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+        <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+    <!--
+        我理解的意思：
+        1.通过运行结果，会有四种不同的表现，首先的是默认属性，属性在这里的作用对象是一个链接
+        2.链接的默认样式是蓝色的，所以第一个默认的就是蓝色
+        3.然后第二个链接的属性是继承，由于之前设置的body中的任何元素颜色都是绿色的，所以第二个继承后
+        颜色也是绿色的
+        4.既没有继承，也没有默认，则用的是浏览器默认样式。同时，我们又知道：如果浏览器默认样式中未设置
+        且该属性是自然继承的，那么会设置为 inherit。但是通过实际运行情况知道，颜色并不是荧光绿，则可
+        推断浏览器的默认样式就是黑色，其实也就是这个链接被点击后的颜色。
+        5.unset也就是自然值，由于属性已经是自然继承了，所以颜色仍然是荧光绿。没有正常继承的话，就是浏览器
+        默认的黑色
+     -->
+    <!--
+         而如果我们把.my-class-1全部注释掉，则link的颜色就会变成黑色，因为没有继承，就是自然值。
+         而自然值就是黑色
+      -->
+</body>
+
+</html>

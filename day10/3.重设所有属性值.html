@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重设所有属性值</title>
+    <style>
+        blockquote {
+            background-color: red;
+            border: 2px solid green;
+        }
+
+        .fix-this {
+            /* 把all改成initial、unset、default、inherit */
+            /* all: unset; */
+            /* all: inherit; */
+            /* all: initial; */
+            all: default;
+            /*
+                只有在设置all: default;的情况下，效果和前面的那个大红色背景一样
+                其他的效果都是另外一种样子，黑色字体，无红色背景
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <blockquote>
+        <p>This blockquote is styled</p>
+    </blockquote>
+    <blockquote class="fix-this">
+        <p>
+            This blockquote is not styled
+        </p>
+    </blockquote>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再一次理解继承之给a设置红色字体属性</title>
+    <style>
+        body {
+            color: greenyellow;
+        }
+
+        .my-class-1 a {
+            color: inherit;
+        }
+
+        .my-class-2 a {
+            color: initial;
+        }
+
+        .my-class-3 a {
+            color: unset;
+        }
+
+        /* 如果此时给a再加一个属性，把字体改成红色 */
+        /* 改变颜色的只能是链接的那个link */
+        a {
+            color: red;
+        }
+
+        /*
+        为什么会出现这种情况？
+        1.my-class-1的属性是继承，继承的优先级要大于对标签的改动
+        2.initial的优先级也大于后面标签的改动
+        3.unset无非就两种情况，要么inherit要么initial，initial就是浏览器默认的
+        的属性，优先级都高。那么只能是比啥属性都没有定义(default)的优先级都要高了
+        4.虽然暂时没法理解，只能记住了
+        */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Default <a href="#">link</a> color</li>
+        <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+        <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+        <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+
+</body>
+
+</html>
