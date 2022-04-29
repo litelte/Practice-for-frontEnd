@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        /* 并没有这个元素，所以伪元素就是自己定义的一个元素 */
+        /* 这表现得就像是<span>神奇地包在第一个被格式化的行一样，每当行长改变的时候还会更新。 */
+        article p::first-line {
+            font-size: 120%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 须以::双冒号开头 -->
+    <article>
+        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+            melon azuki bean garlic.</p>
+
+        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean
+            collard
+            greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    </article>
+</body>
+
+</html>

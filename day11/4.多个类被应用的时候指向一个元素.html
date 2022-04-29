@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个类被应用的时候指向一个元素</title>
+    <style>
+        .notebox {
+            border: 4px solid #666;
+            padding: .5em;
+        }
+
+        .notebox.warning {
+            border-color: orange;
+            font-weight: bold;
+        }
+
+        .notebox.danger {
+            border-color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notebox">
+        This is an informational note.
+    </div>
+
+    <div class="notebox warning">
+        This note shows a warning.
+    </div>
+
+    <div class="notebox danger">
+        This note shows danger!
+    </div>
+    <!--
+        这里的danger并没有被定义，所以没有什么效果
+        换成一个阿猫阿狗，效果都一样，比如换成一个warning
+     -->
+    <div class="danger">
+        This won't get styled — it also needs to have the notebox class
+    </div>
+</body>
+
+</html>

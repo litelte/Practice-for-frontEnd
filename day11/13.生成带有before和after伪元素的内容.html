@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成带有::before和::after的内容</title>
+    <style>
+        .box::before {
+            content: "This should show before the other content.";
+        }
+
+        .box::after {
+            content: "➥";
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        伪元素直接生成一段文字，加到本来元素的前面或后面
+     -->
+    <p class="box">content in the box in my HTML page.</p>
+</body>
+<!--
+    这些伪元素经常用于插入空字符串，其后可以像页面上的其他元素被样式化。
+ -->
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指向特定元素的类</title>
+    <style>
+        /* 这样的作法不是示例中的 */
+        /* h1 {
+            background-color: darksalmon;
+        }
+
+        .highlight {
+            color: black;
+        }
+
+        span {
+            background-color: yellow;
+        } */
+        /* 这才是示例中的代码 */
+        span.highlight {
+            background-color: yellow;
+        }
+
+        h1.highlight {
+            background-color: pink;
+        }
+
+        /*
+        这种方式使CSS没那么可复用，因为类现在只会应用到那个特定元素，
+        在认为规则也该应用到其他元素的时候，你会需要另外加上一个选择器。
+        */
+    </style>
+</head>
+
+<body>
+    <h1 class="highlight">Class selectors</h1>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis <span class="highlight">kohlrabi welsh onion</span>
+        daikon amaranth tatsoi tomatillo
+        melon azuki bean garlic.</p>
+
+    <p class="highlight">Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley shallot courgette
+        tatsoi pea sprouts fava bean collard
+        greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+</body>
+
+</html>

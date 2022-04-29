@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习ID选择器</title>
+    <style>
+        /* 这里加不加h1都没有区别，但是加了h1更具有针对性。 */
+        h1#heading {
+            color: rebeccapurple;
+        }
+
+        #one {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    ID选择器开头以#，不是点
+    在一篇文档中，一个ID只会用到1次
+ -->
+    <h1 id="heading">ID selector</h1>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+        melon azuki bean garlic.</p>
+
+    <p id="one">Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley shallot courgette tatsoi pea
+        sprouts fava bean collard
+        greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+</body>
+<!--
+    所以就是说，ID选择器并不是万能的
+    不到迫不得已，可以不优先用这个
+ -->
+
+</html>

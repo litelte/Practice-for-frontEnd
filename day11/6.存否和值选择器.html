@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解存否和值选择器</title>
+    <style>
+        /* 一定要注意，匹配的对象肯定是选择器 */
+        /* 涉及到的三个点：选择器、匹配的属性、属性对应的值 */
+        /* 这里就属于第一种情况
+        使用li[class]，可以匹配任何有class属性的选择器。
+        在列表中，除第一项以外，其他项都被匹配
+        */
+        li[class] {
+            font-size: 200%;
+        }
+
+        /*
+        这就属于第二种情况
+        有属性，并且属性对应的值也相匹配
+        */
+        li[class='a'] {
+            background-color: yellow;
+        }
+
+        /*
+        第三种情况：匹配一个li的选择器，属性是class,属性对应的值，须为a，
+        或者可以匹配一列用空格分开、包含a的值
+
+        */
+        li[class~='a'] {
+            color: red;
+        }
+
+        /*
+        自己定义第四个属性，匹配一个li的选择器，属性是class，值可以刚好是a,又或者以a开头
+        ，后跟一个连字符
+        */
+        li[class|='a'] {
+            color: rebeccapurple;
+        }
+
+        /*
+        通过运行可以发现，第二个和第五个的字体都被命中了，其实是因为层叠的优先级
+        ，第二个的属性，被第五个的覆盖掉了
+        */
+    </style>
+</head>
+
+<body>
+    <!--
+        这些选择器允许基于一个元素自身是否存在（例如href）或者基于各式不同的按属性值的匹配，来选取元素。
+        用枚举法即可记住：
+        1.匹配属性
+        2.匹配值
+        3.匹配一个属性一个值，或者一个属性，多个值
+        4.匹配一个属性，或含有一个值的字段
+        我能感觉到的是，这个属性还是很重要的，至于值呢，可以全包含，也可以只有一个
+     -->
+    <h1>Attribute presence and value selectors</h1>
+    <ul>
+        <li>Item 1</li>
+        <li class="a">Item 2</li>
+        <li class="a b">Item 3</li>
+        <li class="ab">Item 4</li>
+        <li class="a-b">Item 5</li>
+    </ul>
+</body>
+
+</html>

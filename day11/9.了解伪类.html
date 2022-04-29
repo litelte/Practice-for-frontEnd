@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解伪类</title>
+    <style>
+        /* .first {
+            font-size: 120%;
+            font-weight: bold;
+        } */
+        /* 上面的做法，对维护不利，假如说要在头部再加上一句话，为了保持第一段加大加粗 */
+        /* 就需要取消第二段的效果，重新给第一段加 */
+        /* 这个时候就用到了伪类:first-child */
+        article p:first-child {
+            font-size: 120%;
+            font-weight: bold;
+        }
+    </style>
+    <!--
+        试试这三个伪类：
+        :last-child
+        :only-child
+        :invalid
+     -->
+</head>
+
+<body>
+    <!-- 通俗地讲，伪类就是开头为冒号的关键字： -->
+    <article>
+        <p>
+            I'm a New One!
+        </p>
+        <p>
+            Hello
+        </p>
+        <p class="first">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth
+            tatsoi tomatillo
+            melon azuki bean garlic.</p>
+
+        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean
+            collard
+            greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    </article>
+</body>
+
+</html>

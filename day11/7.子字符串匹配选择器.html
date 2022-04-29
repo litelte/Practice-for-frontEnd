@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解子字符串匹配选择器</title>
+    <style>
+        /* 属性的值，必须以a开头，后面什么无所谓 */
+        li[class^='a'] {
+            font-size: 200%;
+        }
+
+        /* 属性值的结尾，必须以a为结尾 */
+
+        li[class$='a'] {
+            background-color: yellow;
+        }
+
+        /* 属性的值中，只要含有a */
+        li[class*='a'] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        上面学了存否和值选择器，下来开始搞子字符了
+        这些选择器让更高级的属性的值的子字符串的匹配变得可行
+        举个例子：如果你有box-warning和box-error类，想把开头为“box-”字符串的每个物件都匹配上的话，你可以用[class^="box-"]来把它们两个都选中。
+    -->
+    <!--
+        用人话来说，其实就是比存否和值选择器更细致一些，前面是匹配到选择器-属性-值
+        这个子字符串就是更宽了，差不多就是选择器-属性-值的一部分
+     -->
+    <h1>Attribute substring matching selectors</h1>
+    <ul>
+        <li class="a">Item 1</li>
+        <li class="ab">Item 2</li>
+        <li class="bca">Item 3</li>
+        <li class="bcabc">Item 4</li>
+    </ul>
+
+</body>
+
+</html>
